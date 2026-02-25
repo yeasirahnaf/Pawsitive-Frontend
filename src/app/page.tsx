@@ -34,13 +34,6 @@ const TESTIMONIALS = [
   },
 ];
 
-const CATEGORIES = [
-  { label: 'Accessories', emoji: '🦮', href: '/pets?species=dog' },
-  { label: 'Food & Treats', emoji: '🦴', href: '/pets?species=cat' },
-  { label: 'Birds & Exotic', emoji: '🦜', href: '/pets?species=bird' },
-  { label: 'Small Pets', emoji: '🐰', href: '/pets?species=rabbit' },
-];
-
 // ── Page ─────────────────────────────────────────────────────────────────────
 
 export default async function HomePage() {
@@ -125,28 +118,6 @@ export default async function HomePage() {
             <p className="text-base-content/50 mt-2">What kind of companion are you looking for?</p>
           </div>
           <SpeciesRow />
-        </div>
-      </section>
-
-      {/* ── Browse by Category ────────────────────────────────────────────── */}
-      <section className="py-14 max-w-7xl mx-auto px-4 lg:px-8 w-full">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold">Browse Categories</h2>
-          <p className="text-base-content/50 mt-2">Everything your pet needs, in one place</p>
-        </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {CATEGORIES.map(({ label, emoji, href }) => (
-            <Link
-              key={label}
-              href={href}
-              className="card bg-base-200 hover:bg-primary/10 border border-base-300 hover:border-primary card-hover transition-all"
-            >
-              <div className="card-body items-center text-center py-8 gap-3">
-                <span className="text-5xl">{emoji}</span>
-                <span className="font-semibold text-sm">{label}</span>
-              </div>
-            </Link>
-          ))}
         </div>
       </section>
 

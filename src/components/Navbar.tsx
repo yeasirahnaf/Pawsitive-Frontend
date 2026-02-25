@@ -54,8 +54,8 @@ export default function Navbar() {
                                 <Link
                                     href={href}
                                     className={`rounded-full px-4 transition-colors ${pathname === href
-                                            ? 'bg-primary/10 text-primary font-semibold'
-                                            : 'hover:text-primary hover:bg-primary/5'
+                                        ? 'bg-primary/10 text-primary font-semibold'
+                                        : 'hover:text-primary hover:bg-primary/5'
                                         }`}
                                 >
                                     {label}
@@ -120,7 +120,7 @@ export default function Navbar() {
                             </ul>
                         </div>
                     ) : (
-                        <Link href="/auth/login" className="btn btn-primary btn-sm rounded-full">
+                        <Link href="/login" className="btn btn-primary btn-sm rounded-full">
                             Sign In
                         </Link>
                     )}
@@ -157,7 +157,7 @@ export default function Navbar() {
                         </ul>
 
                         {!user && (
-                            <Link href="/auth/login" className="btn btn-primary rounded-full w-full mt-auto">
+                            <Link href="/login" className="btn btn-primary rounded-full w-full mt-auto">
                                 Sign In
                             </Link>
                         )}

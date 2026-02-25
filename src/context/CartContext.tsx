@@ -13,6 +13,7 @@ export interface CartItem {
         breed: string;
         price: number;
         thumbnail_url: string | null;
+        status: string;
     };
 }
 
@@ -53,10 +54,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     const [sessionId, setSessionId] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    useEffect(() => {
-        setSessionId(getOrCreateSessionId());
-    }, []);
-
     const fetchCart = useCallback(async (token?: string | null) => {
         const sid = getOrCreateSessionId();
         setIsLoading(true);
@@ -68,6 +65,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
             setIsLoading(false);
         }
     }, []);
+
+    useEffect(() => {
+        const sid = getOrCreateSessionId();
+        setSessionId(sid);
+
+        const token = localStorage.getItem('paws_token');
+        fetchCart(token).catch(console.error);
+    }, [fetchCart]);
 
     const addItem = useCallback(async (petId: string, token?: string | null) => {
         const sid = getOrCreateSessionId();

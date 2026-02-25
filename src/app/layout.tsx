@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="pawsitive">
-      <body className="antialiased min-h-screen flex flex-col bg-base-100 text-base-content">
+    <html lang="en" data-theme="pawsitive" suppressHydrationWarning>
+      <body className="antialiased min-h-screen flex flex-col bg-base-100 text-base-content" suppressHydrationWarning>
         <AuthProvider>
           <CartProvider>
             <Navbar />
