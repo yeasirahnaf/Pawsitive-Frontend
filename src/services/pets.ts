@@ -22,7 +22,7 @@ export interface Pet {
     location_name: string;
     latitude: number;
     longitude: number;
-    behaviours: string[];
+    behaviours: { id: string; pet_id: string; behaviour: string }[];
     images: PetImage[];
     thumbnail_url: string | null;
     created_at: string;

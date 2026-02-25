@@ -1,0 +1,34 @@
+src/app/pets/[id]/page.tsx(21,27): error TS2339: Property 'name' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(21,41): error TS2339: Property 'breed' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(22,38): error TS2339: Property 'name' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(22,60): error TS2339: Property 'age_months' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(22,88): error TS2339: Property 'breed' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(34,9): error TS7034: Variable 'pet' implicitly has type 'any' in some locations where its type cannot be determined.
+src/app/pets/[id]/page.tsx(41,53): error TS2339: Property 'species' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(42,58): error TS7005: Variable 'pet' implicitly has an 'any' type.
+src/app/pets/[id]/page.tsx(57,81): error TS2339: Property 'species' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(57,97): error TS2339: Property 'species' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(58,72): error TS2339: Property 'name' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(67,37): error TS2339: Property 'images' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(68,43): error TS2339: Property 'thumbnail_url' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(69,38): error TS2339: Property 'name' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(79,89): error TS2339: Property 'name' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(80,90): error TS2339: Property 'breed' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(89,30): error TS2339: Property 'description' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(89,57): error TS2339: Property 'name' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(89,79): error TS2339: Property 'age_months' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(89,107): error TS2339: Property 'breed' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(94,84): error TS2339: Property 'age_months' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(96,39): error TS2339: Property 'gender' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(98,70): error TS2339: Property 'gender' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(100,112): error TS2339: Property 'color' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(101,109): error TS2339: Property 'size' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(110,30): error TS2339: Property 'behaviours' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(116,46): error TS2339: Property 'behaviours' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(116,62): error TS7006: Parameter 'b' implicitly has an 'any' type.
+src/app/pets/[id]/page.tsx(127,30): error TS2339: Property 'health_records' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(132,103): error TS2339: Property 'health_records' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(138,30): error TS2339: Property 'location_name' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(148,77): error TS2339: Property 'location_name' does not exist on type '{ success: boolean; data: Pet; }'.
+src/app/pets/[id]/page.tsx(161,37): error TS2740: Type '{ success: boolean; data: Pet; }' is missing the following properties from type 'Pet': id, name, species, breed, and 15 more.
+src/app/pets/[id]/page.tsx(169,100): error TS2339: Property 'species' does not exist on type '{ success: boolean; data: Pet; }'.

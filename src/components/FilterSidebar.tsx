@@ -53,7 +53,7 @@ export default function FilterSidebar({ onClose }: FilterSidebarProps) {
     }, [router, onClose]);
 
     return (
-        <aside className="w-full flex flex-col gap-1">
+        <div className="w-full bg-base-100 border border-base-300 rounded-2xl p-4 flex flex-col gap-1">
             <div className="flex items-center justify-between mb-2">
                 <h2 className="font-semibold text-base">Filters</h2>
                 <button onClick={reset} className="btn btn-ghost btn-xs text-error gap-1">
@@ -175,6 +175,6 @@ export default function FilterSidebar({ onClose }: FilterSidebarProps) {
             <button onClick={apply} className="btn btn-primary rounded-full mt-3 w-full">
                 Apply Filters
             </button>
-        </aside>
+        </div>
     );
 }
