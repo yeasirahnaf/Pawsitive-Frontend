@@ -1,26 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@plugin "daisyui" {
+  themes: pawsitive --default;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --animation-fast: 150ms;
+    --animation-normal: 250ms;
+    --animation-slow: 400ms;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── DaisyUI custom theme ───────────────────────────────────────────────── */
+[data-theme="pawsitive"] {
+  --color-primary: oklch(72% 0.18 55);          /* amber-orange #FF9500 */
+  --color-primary-content: oklch(100% 0 0);     /* white */
+
+  --color-secondary: oklch(60% 0.20 295);       /* violet */
+  --color-secondary-content: oklch(100% 0 0);
+
+  --color-accent: oklch(70% 0.18 160);          /* teal */
+  --color-accent-content: oklch(100% 0 0);
+
+  --color-neutral: oklch(22% 0.05 260);         /* deep navy */
+  --color-neutral-content: oklch(95% 0 0);
+
+  --color-base-100: oklch(100% 0 0);            /* white */
+  --color-base-200: oklch(97% 0.01 60);         /* warm off-white */
+  --color-base-300: oklch(92% 0.02 60);         /* light border */
+  --color-base-content: oklch(18% 0 0);         /* near-black text */
+
+  --color-success: oklch(65% 0.20 145);
+  --color-warning: oklch(75% 0.18 75);
+  --color-error: oklch(60% 0.22 25);
+  --color-info: oklch(65% 0.15 240);
+
+  --radius-btn: 9999px;                         /* pill buttons */
+  --radius-box: 1rem;                           /* cards */
+  --radius-badge: 9999px;
+}
+
+/* ── Utility helpers ────────────────────────────────────────────────────── */
+.blob-bg {
+  position: relative;
+  z-index: 0;
+}
+.blob-bg::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: oklch(72% 0.18 55 / 0.15);
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  z-index: -1;
+  animation: blob-morph 8s ease-in-out infinite;
+}
+
+@keyframes blob-morph {
+  0%, 100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+  33%      { border-radius: 40% 60% 45% 55% / 60% 35% 65% 40%; }
+  66%      { border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%; }
+}
+
+/* Fade-up animation utility */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up var(--animation-slow) ease-out both;
+}
+
+/* Hover card lift */
+.card-hover {
+  transition: transform var(--animation-normal) ease, box-shadow var(--animation-normal) ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -4px oklch(72% 0.18 55 / 0.25);
 }
